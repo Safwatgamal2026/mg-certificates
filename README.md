@@ -1,204 +1,297 @@
-# مولد الشهادات | Certificate Generator
+<div align="center">
+  <h1>🎓 مولد الشهادات الاحترافي</h1>
+  <p><strong>نظام متقدم لإنشاء وتخصيص الشهادات الرقمية</strong></p>
+  
+  <br/>
+  
+  [![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-blue?style=flat-square&logo=php)](https://php.net)
+  [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+  [![Version](https://img.shields.io/badge/Version-1.0.0-orange?style=flat-square)](CHANGELOG)
+  [![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)](README.md)
+  
+  <br/>
+  
+  <h3>
+    <a href="#-العربية">العربية</a> •
+    <a href="#-english">English</a> •
+    <a href="https://macrogreenltd.com/verify/">التحقق من الشهادات</a>
+  </h3>
+</div>
 
 ---
 
 ## 🇸🇦 العربية
 
-### نظرة عامة
+### 📌 نظرة عامة
 
-**مولد الشهادات** هو نظام PHP متقدم لإنشاء وتخصيص الشهادات الرقمية بسهولة. يوفر الحل واجهة احترافية وقابلة للتوسع لإدارة ومعالجة الشهادات.
+**مولد الشهادات** هو منصة احترافية متطورة لإنشاء وتخصيص الشهادات الرقمية بكفاءة عالية. توفر النظام حلاً شاملاً وقابلاً للتوسع مع دعم كامل للغة العربية وأفضل معايير الأمان.
 
-### المميزات ✨
+### ✨ المميزات الرئيسية
 
-- ✅ إنشاء شهادات مخصصة وديناميكية
-- ✅ دعم اللغة العربية الكامل
-- ✅ معالجة آمنة للبيانات
-- ✅ نظام قابل للتوسع والتطوير
-- ✅ واجهة سهلة الاستخدام
-- ✅ دعم عدة تنسيقات للتصدير
+| الميزة               | الوصف                                           |
+| -------------------- | ----------------------------------------------- |
+| 🎨 **تخصيص كامل**    | إنشاء شهادات مخصصة وديناميكية حسب احتياجاتك     |
+| 🌍 **دعم عربي كامل** | دعم شامل للغة العربية والكتابة من اليمين لليسار |
+| 🔒 **أمان عالي**     | معالجة آمنة للبيانات مع أفضل معايير الحماية     |
+| 📈 **قابل للتوسع**   | بنية نظام مرنة قابلة للتطوير والتوسع            |
+| ⚡ **سهل الاستخدام** | واجهة بديهية وسهلة الاستخدام للمطورين           |
+| 📤 **تصدير متعدد**   | دعم عدة صيغ للتصدير (PDF، الصور، وأكثر)         |
 
-### متطلبات التثبيت
+### 📋 المتطلبات النظامية
 
-- **PHP** 7.4 أو أعلى
-- **خادم الويب** (Apache أو Nginx)
-- **قاعدة البيانات** (اختياري - حسب الاحتياجات)
+- **PHP** : الإصدار 7.4 أو أحدث
+- **خادم الويب** : Apache أو Nginx أو IIS
+- **قاعدة البيانات** : اختيارية (حسب احتياجات المشروع)
+- **الذاكرة** : 512 MB على الأقل
 
-### البنية الأساسية
+### 📁 هيكل المشروع
 
 ```
 mg-certificates/
-├── mg-certificates-arabic-pro.php  # الملف الرئيسي للنظام
-├── includes/
-│   └── core.php                    # الوظائف الأساسية والمكتبات
-├── templates/
-│   └── cert.php                    # قالب الشهادة الأساسي
-└── README.md                       # هذا الملف
+│
+├── 📄 mg-certificates-arabic-pro.php    ← الملف الرئيسي للنظام
+├──
+├── 📂 includes/
+│   └── 🔧 core.php                      ← الوظائف الأساسية والمكتبات
+│
+├── 📂 templates/
+│   └── 🎨 cert.php                      ← قالب الشهادة الأساسي
+│
+└── 📄 README.md                         ← ملف التوثيق
 ```
 
-### الاستخدام 🚀
+### 🚀 بدء الاستخدام
 
-#### 1. التثبيت الأساسي
+#### 1️⃣ التثبيت والإعداد
 
 ```bash
-# نسخ الملفات إلى خادم الويب الخاص بك
+# نسخ الملفات إلى خادم الويب
 cp -r mg-certificates /var/www/html/
 
-# تعديل الصلاحيات
+# تعديل صلاحيات المجلدات
 chmod -R 755 mg-certificates
+
+# التأكد من وجود صلاحيات الكتابة للملفات المؤقتة
+chmod -R 777 mg-certificates/uploads/
 ```
 
-#### 2. الإعدادات الأولية
+#### 2️⃣ التكوين الأولي
 
-اتبع التعليمات الموجودة في ملف `mg-certificates-arabic-pro.php` لضبط الإعدادات الأساسية.
+تأكد من تعديل الإعدادات الأساسية في ملف `mg-certificates-arabic-pro.php`:
 
-#### 3. إنشاء الشهادات
+- معلومات الشركة/المؤسسة
+- إعدادات قاعدة البيانات (إن وجدت)
+- المسارات والروابط الأمنية
+
+#### 3️⃣ إنشاء الشهادات
 
 ```php
 <?php
 require_once 'includes/core.php';
 
-// تحديد بيانات الشهادة
+// تحضير بيانات الشهادة
 $certificate_data = [
-    'name' => 'اسم المتلقي',
-    'course' => 'اسم الدورة',
-    'date' => date('Y-m-d')
+    'recipient_name' => 'اسم المتلقي',
+    'course_name'    => 'اسم البرنامج/الدورة',
+    'issue_date'     => date('Y-m-d'),
+    'certificate_id' => uniqid('CERT-')
 ];
 
 // إنشاء الشهادة
-generate_certificate($certificate_data);
+if (generate_certificate($certificate_data)) {
+    echo "تم إنشاء الشهادة بنجاح ✓";
+} else {
+    echo "حدث خطأ في إنشاء الشهادة";
+}
 ?>
 ```
 
-### الملفات الرئيسية
+### 📚 الملفات الرئيسية
 
-#### `mg-certificates-arabic-pro.php`
+#### 🔧 `mg-certificates-arabic-pro.php`
 
-الملف الرئيسي الذي يحتوي على منطق النظام والمعالجة الأساسية.
+الملف الرئيسي الذي يحتوي على:
 
-#### `includes/core.php`
+- منطق النظام الأساسي والمعالجة
+- للإعدادات الرئيسية
+- معالجة الطلبات من المستخدمين
 
-يحتوي على:
+#### 🛠️ `includes/core.php`
 
-- الوظائف الأساسية للنظام
+مكتبة الوظائف الأساسية تتضمن:
+
 - دوال معالجة الشهادات
-- وظائف التحقق والأمان
+- وظائف التحقق والصحة البيانية
+- دوال الأمان والتشفير
+- دوال التصدير والطباعة
 
-#### `templates/cert.php`
+#### 🎨 `templates/cert.php`
 
-قالب HTML لتصميم الشهادات القابل للتخصيص.
+قالب HTML قابل للتخصيص يحتوي على:
 
-### الدعم والمساعدة 💬
-
-للمزيد من المعلومات أو الإبلاغ عن مشاكل، يرجى التواصل معنا.
-
-### التحقق من الشهادات 🔐
-
-يمكنك التحقق من صحة الشهادات من خلال الموقع الرسمي:
-**[https://macrogreenltd.com/verify/](https://macrogreenltd.com/verify/)**
+- تصميم الشهادة الأساسي
+- متغيرات ديناميكية قابلة للتخصيص
+- أنماط CSS قابلة للتعديل
 
 ---
 
 ## 🇬🇧 English
 
-### Overview
+### 📌 Overview
 
-**Certificate Generator** is an advanced PHP system for creating and customizing digital certificates with ease. It provides a professional and scalable solution for managing and processing certificates.
+**Certificate Generator** is a professional advanced platform for creating and customizing digital certificates with high efficiency. The system provides a comprehensive solution with complete Arabic language support and follows the best security standards.
 
-### Features ✨
+### ✨ Key Features
 
-- ✅ Create custom and dynamic certificates
-- ✅ Full Arabic language support
-- ✅ Secure data handling
-- ✅ Scalable and extensible system
-- ✅ User-friendly interface
-- ✅ Multiple export format support
+| Feature                        | Description                                                     |
+| ------------------------------ | --------------------------------------------------------------- |
+| 🎨 **Full Customization**      | Create custom and dynamic certificates according to your needs  |
+| 🌍 **Complete Arabic Support** | Comprehensive support for Arabic language and RTL writing       |
+| 🔒 **High Security**           | Safe data processing with the best protection standards         |
+| 📈 **Scalable**                | Flexible system architecture that can be developed and extended |
+| ⚡ **Easy to Use**             | Intuitive interface easy for developers to use                  |
+| 📤 **Multiple Export**         | Support for multiple export formats (PDF, images, and more)     |
 
-### Requirements
+### 📋 System Requirements
 
-- **PHP** 7.4 or higher
-- **Web Server** (Apache or Nginx)
-- **Database** (Optional - based on needs)
+- **PHP** : Version 7.4 or newer
+- **Web Server** : Apache, Nginx, or IIS
+- **Database** : Optional (based on project needs)
+- **Memory** : 512 MB minimum
 
-### Project Structure
+### 📁 Project Structure
 
 ```
 mg-certificates/
-├── mg-certificates-arabic-pro.php  # Main system file
-├── includes/
-│   └── core.php                    # Core functions and libraries
-├── templates/
-│   └── cert.php                    # Basic certificate template
-└── README.md                       # This file
+│
+├── 📄 mg-certificates-arabic-pro.php    ← Main system file
+├──
+├── 📂 includes/
+│   └── 🔧 core.php                      ← Core functions and libraries
+│
+├── 📂 templates/
+│   └── 🎨 cert.php                      ← Basic certificate template
+│
+└── 📄 README.md                         ← Documentation file
 ```
 
-### How to Use 🚀
+### 🚀 Getting Started
 
-#### 1. Basic Installation
+#### 1️⃣ Installation & Setup
 
 ```bash
-# Copy files to your web server
+# Copy files to the web server
 cp -r mg-certificates /var/www/html/
 
-# Set permissions
+# Modify folder permissions
 chmod -R 755 mg-certificates
+
+# Ensure write permissions for temporary files
+chmod -R 777 mg-certificates/uploads/
 ```
 
-#### 2. Initial Setup
+#### 2️⃣ Initial Configuration
 
-Follow the instructions in `mg-certificates-arabic-pro.php` to configure the basic settings.
+Make sure to modify the basic settings in `mg-certificates-arabic-pro.php`:
 
-#### 3. Generate Certificates
+- Company/Organization information
+- Database settings (if any)
+- Paths and security links
+
+#### 3️⃣ Creating Certificates
 
 ```php
 <?php
 require_once 'includes/core.php';
 
-// Define certificate data
+// Prepare certificate data
 $certificate_data = [
-    'name' => 'Recipient Name',
-    'course' => 'Course Name',
-    'date' => date('Y-m-d')
+    'recipient_name' => 'Recipient Name',
+    'course_name'    => 'Program/Course Name',
+    'issue_date'     => date('Y-m-d'),
+    'certificate_id' => uniqid('CERT-')
 ];
 
 // Generate the certificate
-generate_certificate($certificate_data);
+if (generate_certificate($certificate_data)) {
+    echo "Certificate created successfully ✓";
+} else {
+    echo "Error creating certificate";
+}
 ?>
 ```
 
-### Main Files
+### 📚 Main Files
 
-#### `mg-certificates-arabic-pro.php`
+#### 🔧 `mg-certificates-arabic-pro.php`
 
-The main file containing the system logic and basic processing.
+The main file containing:
 
-#### `includes/core.php`
+- Core system logic and processing
+- Main settings
+- User request handling
 
-Contains:
+#### 🛠️ `includes/core.php`
 
-- Core system functions
+Basic functions library includes:
+
 - Certificate processing functions
-- Validation and security functions
+- Verification and data validation functions
+- Security and encryption functions
+- Export and print functions
 
-#### `templates/cert.php`
+#### 🎨 `templates/cert.php`
 
-Customizable HTML template for certificate design.
+Customizable HTML template containing:
 
-### Support & Help 💬
-
-For more information or to report issues, please contact us.
-
-### Certificate Verification 🔐
-
-You can verify the authenticity of certificates through our official website:
-**[https://macrogreenltd.com/verify/](https://macrogreenltd.com/verify/)**
+- Basic certificate design
+- Dynamic customizable variables
+- Editable CSS styles
 
 ---
 
-## 📝 License
+### 💬 Support & Help
 
-This project is provided as-is for development and educational purposes.
+For more information or to report issues, please contact us at:
 
-## 👨‍💻 Version
+- 📧 Email: support@macrogreenltd.com
+- 🌐 Website: https://macrogreenltd.com
 
-**Version**: 1.0.0  
-**Last Updated**: 2026-04-01
+---
+
+<div align="center">
+
+## 🔐 Certificate Verification
+
+### Verify Certificate Authenticity
+
+**[🔗 Visit Verification Portal](https://macrogreenltd.com/verify/)**
+
+You can verify the authenticity of all certificates issued through this system using our official verification platform.
+
+---
+
+## 📝 License & Version
+
+| Property            | Value               |
+| ------------------- | ------------------- |
+| 📜 **License**      | MIT License         |
+| 📦 **Version**      | 1.0.0               |
+| 📅 **Last Updated** | April 1, 2026       |
+| ✅ **Status**       | Active & Maintained |
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! If you have suggestions for improvements or find bugs, please let us know.
+
+---
+
+<p>
+  <strong>Made with ❤️ for the Communities</strong>
+  <br/>
+  © 2026 Macro Green Ltd. All Rights Reserved.
+</p>
+
+</div>
